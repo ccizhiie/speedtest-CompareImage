@@ -1,0 +1,20 @@
+body {
+    margin: 20px;
+    padding: 0;
+    user-select: none;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+}
+
+img {
+    width: 400px;
+    -webkit-user-drag: none;
+}
+
+.gray {
+    filter: grayscale(100%);
+    overflow: hidden;
+}
