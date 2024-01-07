@@ -17,3 +17,25 @@ circle.addEventListener("mousedown", ()=> {
     mousedown = true;
     console.log('tekan');
 })
+
+console.log(width_percent);
+
+document.addEventListener("mousemove", (e)=> {
+    if (mousedown) {
+        mouse_position = e.clientX - 20;
+        width_percent = (mouse_position / width_image) * 100;
+        if (width_percent >= 100) {
+            width_percent = 100;
+        } else if (width_percent <= 0) {
+            width_percent = 0;
+        }
+        change();
+    }
+})
+
+document.addEventListener("mouseup", ()=> {
+    mousedown = false;
+    console.log('tolak');
+})
+
+change();
